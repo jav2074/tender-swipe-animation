@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link href="css/css.css" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- Carrusel -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+    <script src="js/functions.js"></script>
+    <script src="js/script.js"></script>
+
+    <title>Sexiting Test</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.icon-icons.com/icons2/1448/PNG/512/42598rocket_99004.png">
+
+</head>
+<body>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <div class="container-fluid header">
+            <h1>Sexiting Test</h1>
+            <p></p>
+        </div>      
+
+        <div class="container-fluid">
+            <div class="row">                
+                <div class="col-sm-6 text-center">
+                    <h1>Fotos</h1>
+                    <div id="theCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicadores -->
+                        <ol class="carousel-indicators">
+                            <li ng-repeat="x in pics" 
+                                data-target="#theCarousel" 
+                                data-slide-to="{{$index}}" 
+                                class="{{x.class}}"></li>
+                        </ol>
+            
+                        <div class="carousel-inner" role="listbox">
+                            <div ng-repeat="x in pics" class="item {{x.class}}">
+                                <img src="{{x.image}}" alt="foto"> 
+                            </div>
+
+                            <a class="left carousel-control" href="#theCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">anterior</span>
+                            </a>
+                            <a class="right carousel-control" href="#theCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">siguiente</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <h1>Datos</h1>
+                </div>
+            </div>
+        </div>
+
+        <a href="" class="float-like" ng-click="likeOrNot('true')">
+            <i class="glyphicon glyphicon-ok my-float"></i>
+        </a>
+        <a href="" class="float-unlike" ng-click="likeOrNot('false')">
+            <i class="glyphicon glyphicon-remove my-float"></i>
+        </a>
+    </div>
+
+</body>
+</html>
