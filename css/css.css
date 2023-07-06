@@ -88,13 +88,13 @@ html, body {
 }
 
 .card .like::after {
-  content: "YUMM";
+  content: "LIKE";
   color: #4dca93;
   border: 0.1em solid #4dca93;
 }
 
 .card .nope::after {
-  content: "YUCK";
+  content: "NOPE";
   color: #fb4f68;
   border: 0.1em solid #fb4f68;
 }
