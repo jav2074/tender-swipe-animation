@@ -15,3 +15,6 @@ git push -u origin main
 git remote add origin https://github.com/jav2074/tender-swipe-animation.git
 git branch -M main
 git push -u origin main
+
+
+https://codepen.io/rudtjd2548/pen/qBodXzO?editors=0100
